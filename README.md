@@ -1,1 +1,1 @@
-# IIIT-DHARWAD-Projects-Cryptography-Mobius-Euler-By-Rajendra-Hegadi-Sir
+# IIIT-DHARWAD-Projects-Cryptography-Mobius-Euler-By-Rajendra-Hegadi
