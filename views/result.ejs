@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Result</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/basicpagestyle.css"/>
+    <link rel="stylesheet" href="/result.css"/>
+    <script>
+        function goto(){
+            location.href = "/"
+        }
+     </script>
+</head>
+
+<body onclick="goto();" class="gradient-background">
+    <% if (color==1) { %>
+        <% var t = "background:#6fb32b" %>
+            <% } else if(color==2) { %>
+                <% var t = "background:#FFCC00" %>
+                    <% } else { %>
+                        <% var t = "background:#ca0b00" %>
+                            <% } %>
+
+                                <!-- Modal HTML -->
+                                <div id="myModal" class="modal fade">
+                                    <div class="modal-dialog modal-confirm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="icon-box" style="<%= t %>">
+                                                    <% if (color==1) { %>
+                                                        <i class="material-icons">
+                                                            done
+                                                        </i>
+                                                        <% } %>
+                                                            <% if (color==2) { %>
+                                                                <i class="material-icons">
+                                                                    sentiment_satisfied_alt
+                                                                </i>
+
+
+                                                                <% } %>
+                                                                    <% if (color==3) { %>
+                                                                        <i class="material-icons">
+                                                                            error
+                                                                        </i>
+
+
+                                                                        <% } %>
+                                                </div>
+                                                <% if (color==1) { %>
+                                                    <h4 class="modal-title ">Awesome!</h4>
+                                                    <% } %>
+                                                        <% if (color==2) { %>
+                                                            <h4 class="modal-title ">No worries :)</h4>
+                                                            <% } %>
+                                                                <% if (color==3) { %>
+                                                                    <h4 class="modal-title ">Oops !!</h4>
+                                                                    <% } %>
+
+                                            </div>
+                                            <div class="modal-body ">
+                                                <p class="text-center ">
+                                                    <%= reply %>
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <% if (color==1) { %>
+                                                    <a href="/ "><button class="btn  btn-block " style="<%= t %>" >OK</button></a>
+                                                    <% } %>
+                                                        <% if (color==2) { %>
+                                                            <a href="/ "><button class="btn  btn-block " style="<%= t %>" >OK</button></a>
+                                                            <% } %>
+                                                                <% if (color==3) { %>
+                                                                    <a href="/ "><button class="btn  btn-block " style="<%= t %>" >OK</button></a>
+                                                                    <% } %>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(document).ready(function() {
+                                        $("#myModal ").modal('show');
+                                    });
+                                </script>
+
+</body>
+
+</html>

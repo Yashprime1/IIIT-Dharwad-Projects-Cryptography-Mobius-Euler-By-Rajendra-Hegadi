@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Cryptography</title>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/basicpagestyle.css"/>
+</head>
+
+
+<body class="gradient-background">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col l4 s4 m4"></div>
+            <div class="col l4 s4 m4 center">
+                <img class=" z-depth-5 responsive-img" style="margin:20px; width: 100px;height: 100px;" src="/crypto.jpg">
+            </div>
+            <div class="col l4 s4 m4"></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row" style="margin:20px">
+        <div class="col s4 m4 l4"></div>
+        <form class="col s4 m4 l4" method="post" action="/">
+            <div class="row">
+                <div class="input-field col s4 m4 l4">
+                    <input  name="input_number" type="number" min="0" class="validate">
+                    <label for="icon_prefix"> Enter Number</label>
+                </div>
+                <div class="input-field col s4 m4 l4">
+                    <select name="input_function">
+                        <option value="" disabled selected>Choose function</option>
+                        <option value="0">Mobius Function</option>
+                        <option value="1">Euler Totient</option>
+                    </select>
+                </div>
+                <div class="col l4 s4 m4 center">
+                    <button id="submit" class="btn-floating btn-large waves-effect waves-light"><i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </form>
+        <div class="col s4 m4 l4"></div>
+    </div>
+
+    <div class="row" style="margin:20px">
+        <div class="footer " style="text-align:center;">  
+            Made by<a href="https://github.com/Yashprime1/IIIT-DHARWAD-Projects-Cryptography-Mobius-Euler-By-Rajendra-Hegadi-Sir"> Yashdeep Shetty &#128519;</a> .   
+            </div>  
+    </div>
+
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var modalStarter = document.querySelectorAll('.modal');
+            M.Modal.init(modalStarter, {});
+        
+            const selection = document.querySelectorAll('select');
+            M.FormSelect.init(selection, {});
+        })
+         
+    </script> 
+
+</body>
+
+</html>
