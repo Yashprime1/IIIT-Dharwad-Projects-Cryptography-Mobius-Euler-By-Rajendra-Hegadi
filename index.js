@@ -17,7 +17,7 @@ var Algorithmia = require("algorithmia");
 
 
 app.get('/', function (req, res) {
-    fs.readFile('ip.txt', (err, data) => {
+    fs.readFile('./ip.txt', (err, data) => {
         if (err) throw err;
         var lines = data.toString();
         var listoflines=lines.split("\n");
