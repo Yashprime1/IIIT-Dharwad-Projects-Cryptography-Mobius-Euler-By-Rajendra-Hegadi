@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 var urlencodedParser = (bodyParser.urlencoded({ extended: false }))
 const PORT = process.env.PORT || 3000 ;
 const app = new express();
@@ -16,7 +17,13 @@ var Algorithmia = require("algorithmia");
 
 
 app.get('/', function (req, res) {
-    res.render('index');
+    fs.readFile('ip.txt', (err, data) => {
+        if (err) throw err;
+        var lines = data.toString();
+        var listoflines=lines.split("\n");
+        var ipaddr=listoflines[0];
+    }
+    res.render('index',{ip:ipaddr});
 });
 
 
